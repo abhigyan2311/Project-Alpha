@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if(isset($_SESSION['userid'])){
+	header("location:main.php");
+}
+?>
+
 <!DOCTYPE html>
   <html>
     <head>
@@ -35,7 +43,7 @@
         <div class="row" style="padding-right:75px;">
             <div class="col s3 offset-s9 grey darken-4 login" id="signUp">
                 <div class="row">
-                    <form name="myForm" onsubmit="return validateForm()" class="col12" action="test.php">
+                    <form name="myForm" onsubmit="return validateForm()" class="col12" action="signup.php" method="POST">
                         <div class="row">
                             <div class="col s12 center-align">
                                 <h4>Sign Up</h4>
@@ -46,7 +54,7 @@
                                 <label for="user_name" class="white-text">E-Mail</label>
                             </div>
                             <div class="input-field col s12 ">
-                                <input id="pwd" type="password" class="validate" name="pass">
+                                <input id="pwd" type="password" name="pass" class="validate" name="pass">
                                 <label for="user_name" class="white-text">Password</label>
                                 
                             </div>
@@ -62,20 +70,19 @@
             
             <div class="col s3 offset-s9 grey darken-4 login" id="logIn">
                 <div class="row">
-                    <form class="col12">
+                    <form class="col12" action="login.php" method="POST">
                         <div class="row">
                             <div class="col s12 center-align">
                                 <h4>Sign In</h4>
                             </div>
                             <hr>
                             <div class="input-field col s12">
-                                <input id="user_name" type="text" class="validate">
+                                <input id="user_name" type="text" name="userName" class="validate">
                                 <label for="user_name" class="white-text">E-Mail</label>
                             </div>
                             <div class="input-field col s12 ">
-                                <input id="pwd" type="password" class="validate">
-                                <label for="user_name" class="white-text">Password</label>
-                                
+                                <input id="pwd" type="password" name="password" class="validate">
+                                <label for="user_name" class="white-text">Password</label>        
                             </div>
                             <div class="col s12 center-align">
                                 <a id="btnLogIn" class="waves-effect waves-light btn loginButton blue">Log In</a>

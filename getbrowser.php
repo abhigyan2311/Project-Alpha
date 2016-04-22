@@ -81,14 +81,13 @@ function getBrowser()
         'name'      => $bname,
         'version'   => $version,
         'platform'  => $platform,
-        'pattern'    => $pattern
+        'pattern'   => $pattern
     );
 } 
 
 // now try it
-$ua=getBrowser();
-print('Browser : ' . $ua['name'] . '<br>');
-print('Version : ' . $ua['version'] . '<br>');
-print('Platform : ' . $ua['platform'] . '<br>');
- 
+//$ua=getBrowser();
+//print('Browser : ' . $ua['name'] . '<br>');
+//print('Version : ' . $ua['version'] . '<br>');
+//print('Platform : ' . $ua['platform'] . '<br>');
 ?>
