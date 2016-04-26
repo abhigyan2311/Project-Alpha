@@ -1,16 +1,20 @@
 <html>
 <?php
 include 'db.php';
+include 'getbrowser.php';
 
 $conn = mysqli_connect($servername,$username,$password,$myDatabase);
 if(!$conn){}
 else{echo "connected<br>";}
 
-$ip = "::3";
+$ip=$_SERVER['REMOTE_ADDR'];
+$ua=getBrowser();
+
 $userid = "12345";
-$browser = "Safari";
-$version = "9.0";
-$os = "MAC";
+
+$browser = $ua['name'];
+$version = $ua['version'];
+$os = $ua['platform'];
 
 $sql = "select * from user_ip where ip='$ip'";
 $result = mysqli_query($conn,$sql);
