@@ -27,6 +27,8 @@ $sql2 = "INSERT INTO user_ip(userid,ip,browser,version,os) VALUES ('$rand','$ip'
 $conn->query($sql);
 $conn->query($sql2);
 
+header("location:main.php");
+
 
 $conn->close();
 ?>

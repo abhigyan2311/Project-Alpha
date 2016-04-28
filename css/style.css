@@ -1,14 +1,8 @@
 .login {
-            
             height: 450px;
-            margin-top: 100px;
+            margin-top: 50px;
     }
 body{
-   background: url(../main-background1.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
     color: white;
     
 }

@@ -1,10 +1,12 @@
 <?php
+
 session_start();
 
-if(isset($_SESSION['userid'])){
-	header("location:main.php");
+if(isset($_SESSION['userID'])){
+   header("location:main.php");
 }
 ?>
+
 
 <!DOCTYPE html>
   <html>
@@ -34,12 +36,12 @@ if(isset($_SESSION['userid'])){
         
     </head>
 
-    <body>
+    <body class="blue darken-4">
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="js/jquery.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-        
-        
+
+        <h2 class="center-align">Project Alpha</h2>
         <div class="row" style="padding-right:75px;">
             <div class="col s3 offset-s9 grey darken-4 login" id="signUp">
                 <div class="row">
@@ -60,14 +62,14 @@ if(isset($_SESSION['userid'])){
                             </div>
                             <div class="input-field col s12 center-align red-text message">Password must be atleast 6 characters!!</div>
                             <div class="col s12 center-align">
-                                <input class="submit" type="submit" value="submit" style="background-color:blue">
-                                <a class="waves-effect waves-light btn loginButton blue signup" >Sign Up</a>
+                                <button class="btn waves-effect waves-light blue" type="submit" name="action">Submit
+                                  </button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            
+
             <div class="col s3 offset-s9 grey darken-4 login" id="logIn">
                 <div class="row">
                     <form class="col12" action="login.php" method="POST">
@@ -77,15 +79,16 @@ if(isset($_SESSION['userid'])){
                             </div>
                             <hr>
                             <div class="input-field col s12">
-                                <input id="user_name" type="text" name="userName" class="validate">
+                                <input id="user_name" type="text" name="email" class="validate">
                                 <label for="user_name" class="white-text">E-Mail</label>
                             </div>
                             <div class="input-field col s12 ">
-                                <input id="pwd" type="password" name="password" class="validate">
+                                <input id="pwd" type="password" name="pwd" class="validate">
                                 <label for="user_name" class="white-text">Password</label>        
                             </div>
                             <div class="col s12 center-align">
-                                <a id="btnLogIn" class="waves-effect waves-light btn loginButton blue">Log In</a>
+                                <button class="btn waves-effect waves-light blue" type="submit" name="action">Log In
+                                                                  </button>
                             </div>
                             <br>
                             <div class="col s12 center-align">
