@@ -36,7 +36,7 @@ if ($rs->num_rows > 0){
 while($row = mysqli_fetch_assoc($rs)) {
       $userid = $row['userid'];
    }
-    $sql2 = "SELECT * FROM user_ip WHERE (userid='$userid' OR ip='$ip') AND ( created_at > DATE_SUB(now(), INTERVAL 1 DAY))";
+    $sql2 = "SELECT * FROM user_ip WHERE (userid='$userid' OR ip='$ip') AND ( created_at > DATE_SUB(now(), INTERVAL 1 DAY)) ORDER BY created_at DESC";
     $result = mysqli_query($conn,$sql2);
 
     if(mysqli_num_rows($result)>0) {
