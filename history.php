@@ -52,7 +52,7 @@ $conn = new mysqli($servername, $username, $password, $myDatabase);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT * FROM user_ip WHERE userid='$userid'";
+$sql="SELECT * FROM user_ip WHERE userid='$userid' ORDER BY created_at DESC";
 $rs = $conn->query($sql);
 if ($rs->num_rows > 0){
     while($row = $rs->fetch_assoc()) {
