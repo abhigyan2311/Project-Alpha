@@ -90,16 +90,15 @@ if ($rs->num_rows > 0){
                 echo $version;
                 echo "</td><td>";
                 switch ($os) {
-
                 case "Mac" :
                   echo "<img src='./img/osx.png' width='50px' alt='Mac OSX' class='tooltipped' data-position='bottom' data-delay='50' data-tooltip='Mac OSX'></img>";
                   break;
                 case "Linux" :
-                                  echo "<img src='./img/linux.png' width='50px' alt='Linux' class='tooltipped' data-position='bottom' data-delay='50' data-tooltip='Linux'></img>";
-                                  break;
+                  echo "<img src='./img/linux.png' width='50px' alt='Linux' class='tooltipped' data-position='bottom' data-delay='50' data-tooltip='Linux'></img>";
+                  break;
                 case "Windows" :
-                                  echo "<img src='./img/win.png' width='50px' alt='Windows' class='tooltipped' data-position='bottom' data-delay='50' data-tooltip='Windows'></img>";
-                                  break;
+                  echo "<img src='./img/win.png' width='50px' alt='Windows' class='tooltipped' data-position='bottom' data-delay='50' data-tooltip='Windows'></img>";
+                  break;
                 default:
                   echo $os;
                 }
@@ -110,6 +109,9 @@ if ($rs->num_rows > 0){
                 echo "</td></tr>";
     }
 }
+else{
+      echo "<h4>No records</h4><br>";
+    }
 ?>
                      </tbody>
                    </table>
