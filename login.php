@@ -46,9 +46,13 @@ while($row = mysqli_fetch_assoc($rs)) {
        }
        else{
               $sql3="Insert into user_ip(userid,ip,browser,version,os) values('$userid','$ip','$bname','$bversion','$os')";
-              $conn->query($sql3);
-              $_SESSION['userID']= $userid;
-              header("location:main.php");
+              if ($conn->query($sql3) === TRUE) {
+                  $_SESSION['userID']= $userid;
+                  header("location:main.php");
+              } else {
+                  echo "Error: " . $sql . "<br>" . $conn->error;
+              }
+
        }
     }
 }
