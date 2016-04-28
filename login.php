@@ -31,10 +31,13 @@ $pass = sha1(strip_tags(stripslashes(mysqli_real_escape_string($conn,$rpass))));
 
 $sql="SELECT * FROM user_details WHERE email='$email' and pass='$pass'";
 $rs = $conn->query($sql);
-
+while($row = $rs->fetch_assoc()) {
+                      $userid = $row["userid"];
+                      $_SESSION['userID']= $userid;
+                  }
 if ($rs->num_rows > 0){
 
-    $sql2 = "SELECT * FROM user_ip WHERE ip='$ip' && ( created_at > DATE_SUB(now(), INTERVAL 1 DAY));";
+    $sql2 = "SELECT * FROM user_ip WHERE userid='$userid' AND ( created_at > DATE_SUB(now(), INTERVAL 1 DAY));";
     $result = mysqli_query($conn,$sql2);
     if(mysqli_num_rows($result)>0){
       $count = mysqli_num_rows($result);
@@ -42,10 +45,6 @@ if ($rs->num_rows > 0){
           header("location:denied.php");
        }
        else{
-              while($row = $rs->fetch_assoc()) {
-                      $userid = $row["userid"];
-                      $_SESSION['userID']= $userid;
-                  }
               $sql3="Insert into user_ip(userid,ip,browser,version,os) values('$userid','$ip','$bname','$bversion','$os')";
               $conn->query($sql3);
               header("location:main.php");

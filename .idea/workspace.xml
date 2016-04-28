@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3eb28139-ce48-472f-abac-bc100e7f091d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/history.php" afterPath="$PROJECT_DIR$/history.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
     </list>
     <ignored path="iwp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="history.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="history.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/history.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64">
+            <state vertical-scroll-proportion="0.0">
               <caret line="112" column="35" selection-start-line="112" selection-start-column="35" selection-end-line="112" selection-end-column="35" />
               <folding />
             </state>
@@ -45,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="19" selection-start-line="44" selection-start-column="14" selection-end-line="47" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.448">
+              <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -69,13 +68,13 @@
         <option value="$PROJECT_DIR$/signup.php" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/main.php" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/logout.php" />
         <option value="$PROJECT_DIR$/denied.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/histroy.php" />
         <option value="$PROJECT_DIR$/history.php" />
+        <option value="$PROJECT_DIR$/login.php" />
       </list>
     </option>
   </component>
@@ -369,14 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="19" selection-start-line="44" selection-start-column="14" selection-end-line="47" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getbrowser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -387,8 +378,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/history.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64">
+        <state vertical-scroll-proportion="0.0">
           <caret line="112" column="35" selection-start-line="112" selection-start-column="35" selection-end-line="112" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.448">
+          <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
           <folding />
         </state>
       </provider>
