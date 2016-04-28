@@ -9,12 +9,7 @@ if(isset($_SESSION['userid'])){
 include 'getbrowser.php';
 include 'db.php';
 
-$ip = getenv('HTTP_CLIENT_IP')?:
-getenv('HTTP_X_FORWARDED_FOR')?:
-getenv('HTTP_X_FORWARDED')?:
-getenv('HTTP_FORWARDED_FOR')?:
-getenv('HTTP_FORWARDED')?:
-getenv('REMOTE_ADDR');
+$ip=$_SERVER['REMOTE_ADDR'];
 
 
 $ua=getBrowser();
