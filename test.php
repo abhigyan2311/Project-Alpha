@@ -1,3 +1,3 @@
 <?php
-echo session_decode("gu4p8o83l9t8nuifrab86cd5r7");
+echo $_SERVER['REMOTE_ADDR'];
 ?>
